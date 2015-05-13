@@ -13,7 +13,9 @@ juju deploy rethinkdb
 ## Scale
 
 ```shell
-juju add-unit rethinkdb
+juju deploy rethinkdb-slave
+juju add-relation rethinkdb:rethinkdb-master rethinkdb-slave:rethinkdb-master
+juju add-unit rethinkdb-slave
 ```
 
 # Contact
