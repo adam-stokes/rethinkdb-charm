@@ -1,22 +1,22 @@
-# Overview
-
-What is [RethinkDB](http://rethinkdb.com/)?
-RethinkDB is the first open-source, scalable JSON database built from the ground up for the realtime web. It inverts the traditional database architecture by exposing an exciting new access model – instead of polling for changes, the developer can tell RethinkDB to continuously push updated query results to applications in realtime. RethinkDB’s realtime push architecture dramatically reduces the time and effort necessary to build scalable realtime apps.
-
-In addition to being designed from the ground up for realtime apps, RethinkDB offers a flexible query language, intuitive operations and monitoring APIs, and is easy to setup and learn.
-
 # Usage
 
-```shell
-juju deploy rethinkdb
-```
+    juju deploy rethinkdb
+
 ## Scale
 
-```shell
-juju deploy rethinkdb-slave
-juju add-relation rethinkdb:rethinkdb-master rethinkdb-slave:rethinkdb-master
-juju add-unit rethinkdb-slave
-```
+    juju deploy rethinkdb-slave
+    juju add-relation rethinkdb:rethinkdb-master rethinkdb-slave:rethinkdb-master
+    juju add-unit rethinkdb-slave
+
+## Administer
+
+Get public IP for rethinkdb-master and connect with web browser:
+
+http://10.0.3.86:8080
+
+You can verify that the RethinkDB cluster is up and all servers are connected. Create
+a few tables and after a few minutes the replicas will be available throughout
+the cluster.
 
 # Contact
 
