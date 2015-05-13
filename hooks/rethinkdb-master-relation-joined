@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -ux
+
+HOST=`unit-get public-address`
+PORT=29015
+
+relation-set master_host="${HOST}:${PORT}"
+
+juju-log "$JUJU_REMOTE_UNIT joined"

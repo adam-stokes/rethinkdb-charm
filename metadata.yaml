@@ -22,3 +22,5 @@ provides:
     scope: container
   database:
     interface: rethinkdb
+  rethinkdb-master:
+    interface: rethinkdb
