@@ -7,9 +7,7 @@ wget -qO- http://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install -y rethinkdb
 
-cp /etc/rethinkdb/default.conf.sample /etc/rethinkdb/instances.d/instance1.conf
-
-sed -i.bak -e "s/\# bind.*/bind=all/" /etc/rethinkdb/instances.d/instance1.conf
+echo 'bind=all' > /etc/rethinkdb/instances.d/instance1.conf
 
 open-port 28015/TCP
 open-port 8080/TCP
