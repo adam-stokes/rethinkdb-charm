@@ -17,9 +17,6 @@ tags:
   - database
 subordinate: false
 provides:
-  nrpe-external-master:
-    interface: nrpe-external-master
-    scope: container
   database:
     interface: rethinkdb
   rethinkdb-master:

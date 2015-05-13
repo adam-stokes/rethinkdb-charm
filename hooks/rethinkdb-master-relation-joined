@@ -7,4 +7,8 @@ PORT=29015
 
 relation-set master_host="${HOST}:${PORT}"
 
+sed -i.bak -e "s/\# bind.*/bind=all/" /etc/rethinkdb/instances.d/instance1.conf
+
+./hooks/start
+
 juju-log "$JUJU_REMOTE_UNIT joined"
