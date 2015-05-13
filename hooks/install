@@ -6,3 +6,6 @@ sudo apt-get update
 sudo apt-get install -y rethinkdb
 
 cp /etc/rethinkdb/default.conf.sample /etc/rethinkdb/instances.d/instance1.conf
+
+open-port 29015/TCP
+open-port 28015/TCP
